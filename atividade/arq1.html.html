@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="cloudant-style.css">
+<title>IBM Cloudant</title>
+<h3>RESUMO</h3>
+<p>Esse artigo é sobre o Cloudant, que é um Banco de Dados noSQL, Orientado a Documentos que vem sendo desenvolvido pela IBM. O objetivo é explicar conceitos de Bancos de Dados Orientados a Documentos e também mostrar  informações técnicas do software, sua origem, arquitetura, seu formato de interação e alguns exemplos de código.
+<br>
+<br>
+<b>Palavras Chave:</b> Cloudant, Banco de Dados, noSQL, Banco de Dados Orientado a Documentos, conceitos, IBM, software, origem, arquitetura, interação, código.</p>
+<h3>ABSTRACT</h3>
+<p>This article is about Cloudant, which is a NoSQL and Document-Oriented Database, which has been developed by IBM. The purpose is to explain Document-Oriented Database concepts and also show technical information of the software, its origin, architecture, its interaction format and some code examples.
+<br>
+<br>
+<b>Keywords:</b> Cloudant, Database, NoSQL, Document-Oriented Database, IBM, concepts, software, origin, architecture, interaction, code.
+</p>
+<h2>Conteúdo desse artigo</h2>
+<p><a href="#c1">Introdução</a></p>
+<p><a href="#c2">Sobre o Cloudant</a></p>
+<p><a href="#c3">Origem</a></p>
+<p><a href="#c4">Arquitetura</a></p>
+<p><a href="#c5">Interação</a></p>
+<p><a href="#c6">Exemplos de códigos</a></p>
+<p><a href="#c7">Conclusão</a></p>
+<p><a href="#c8">Referências</a></p>
+<br>
+</head>
+<body>
+<h3 id="c1">Introdução</h3>
+<p>Bancos de Dados Orientados a Documentos são uma das principais categorias dos Bancos de Dados NoSQL (Not only SQL) quem vêm se tornando muito populares ultimamente. São projetados para armazenar documentos de dados semi estruturados, normalmente em formato JSON ou XML.</p> 
+<p>Bancos de Dados Orientados a Documentos utilizam obviamente documentos para armazenar e consultar dados. Quando ouvimos a palavra "documento", automaticamente pensamos em algo no formato .docx ou .pdf, mas na realidade de Bancos de Dados, documentos se referem a blocos JSON ou XML. Ao invés de colunas com nomes e tipos de dados que são utilizados no Banco de Dados Relacional, o Orientado a Documentos contêm uma descrição do tipo de dado e o valor para aquela descrição. Essa estrutura pode variar de documento para documento. Documentos são agrupados em collections, que possuem uma função similar ao da tabela relacional.</p>
+<p>Esse artigo é sobre o Cloudant, Banco de Dados Orientado a Documentos, que pertence a IBM. É uma tecnologia teoricamente recente, mas que a cada dia mais vai se tornando mais popular no mercado. O objetivo do artigo é mostrar informações sobre Cloudant, suas origens, arquitetura, formato de interação e exemplos de códigos.</p>
+<br>
+<h3 id="c2">Sobre o Cloudant</h3>
+<p>O Cloudant é um Banco de Dados Orientado a Documentos da IBM que inicialmente foi projetado para cloud computing (computação em nuvem), distribuindo dados entre múltiplos servidores além de redimensionar o banco de dados para que se acomode a aplicações web, através do framework do CouchDB. É também classificado como um Banco de Dados NoSQL.</p>
+<p>Os documentos do Cloudant são em formato JSON, e ele garante que o fluxo de dados entre a aplicação e o seu Banco de Dados permaneça sem interrupção e que tenha uma alta performance.</p>
+<img src="cloudant-logo.jpg" align="middle">
+<p class="img-desc">Logo do Cloudant</p>
+<p>Os três pilares do Cloudant:</p>
+<ul>
+<li>Redução de tempo de inatividade</li>
+<li>Mantêm os dados mais próximos aos usuários</li>
+<li>Foca no desenvolvimento, não na administração do Banco de Dados</li>
+</ul>
+<p>Essa são algumas informações técnicas do Cloudant:</p>
+<table>
+  <tr>
+    <td><b>Nome do SGBD:</b></td>
+    <td>Cloudant</td> 
+  </tr>
+  <tr>
+    <td><b>Fabricante:</b></td>
+    <td>Ibm</td>
+  </tr>
+  <tr>
+    <td><b>Primeira versão:</b></td>
+    <td>2010</td>
+  </tr>
+  <tr>
+    <td><b>Última versão:</b></td>
+    <td>2017</td>
+  </tr>
+  <tr>
+    <td><b>Sistema Operacional:</b></td>
+    <td>Multiplataforma</td>
+  </tr>
+  <tr>
+    <td><b>Tipo:</b></td>
+    <td>NoSQL, Cloud Database</td>
+  </tr>
+  <tr>
+    <td><b>Idioma:</b></td>
+    <td>Inglês</td>
+  </tr>
+  <tr>
+    <td><b>Licença:</b></td>
+    <td>Perpétua ou assinatura mensal</td>
+  </tr>
+</table>
+<p class="img-desc"><b>Fonte:</b>Wikipedia, 2017</p>
+<h3 id="c3">Origem</h3>
+<p>O Cloudant foi criado por três alunos que  se conheceram no departamento de física do MIT (Massachusetts Institute of Technology): Alan Hoffman, Adam Kocoloski e Michael Miller. Eles trabalharam juntos em projetos sobre conjuntos de dados. Em 2008, suas idéias inovadoras para Big Data despertaram o interesse da aceleradora Y Combinator, do Vale do Silício. O resultado disso foi um investimento inicial de US $20 mil. Posteriormente, em agosto de 2010, a Avalon Ventures decidiu investir  US $1 milhão na idéia, criando uma empresa chamada Cloudant.</p>
+<img src="cloudant-developers.jpg">
+<p class="img-desc">Alan Hoffman e Adam Kocoloski, dois dos criadores do Cloudant</p>
+<p>Ainda em agosto de 2010, a Cloudant já oferecia serviços de suporte, consultoria e treinamentos. O primeiro produto com foi lançado no final de 2010, e logo de início já era considerada pelo site CRN como uma das 10 melhores Startups Open-Source, assim como era uma idéia bem reconhecida na comunidade local de startups em Boston, Massachusetts, tendo bastante destaque em revistas de tecnologia do estado. Em janeiro de 2011, já haviam mais de 2500 clientes que utilizavam os serviços de armazenamento da Cloudant.</p>
+<img src="michael-miller.jpg">
+<p class="img-desc">Michael Miller, outro envolvido no início do projeto Cloudant</p>
+<p>Em fevereiro de 2014, a IBM anunciou um acordo para adquirir a Cloudant. O acordo foi fechado em março do mesmo ano, onde a Cloudant foi adicionada ao Grupo de Informações e Análise da IBM.</p>
+<h3 id="c4">Arquitetura</h3>
+<p>O Cloudant adiciona uma determinada quantidade que elementos a um serviço que é criado em cima do Apache Lucene, que trabalha com busca por texto indexado, segurança e processamento incremental em larga escala. O objetivo do Cloudant é fazer com que o desenvolvimento de aplicações fique mais fácil. A figura abaixo mostra como o sistema se comunica em uma API RESTful, ao utilizar um navegador ou uma aplicação móvel.</p>
+<img src="architecture-1.jpg">
+<p class="img-desc">Comunicação do Cloudant em uma API RESTful</p>
+<p>Todas essas funcionalidades são criadas em um balanceamento de carga, que pode utilizar infraestrutura como por exemplo o IBM SoftLayer ou Rackspace, Amazon Web Services (AWS) e Microsoft Azure.</p>
+<p>A arquitetura da aplicação que utiliza o Cloudant se resume basicamente em um navegador, servidor de aplicação, servidor web e o Cloudant em si, ignorando a utilização de bancos de dados relacionais. Podemos ver esse cenário na figura abaixo:</p>
+<img src="architecture-2.jpg">
+<p class="img-desc">Arquitetura de aplicação que utiliza o Cloudant</p>
+<h3 id="c5">Interação</h3>
+<p>É possível interagir com o Cloudant através da linguagem Python, por meio de uma biblioteca chamada Cloudant NoSQL DB Client Library.</p>
+<h3 id="c6">Exemplos de códigos</h3>
+<p>A sintaxe utilizada para consultas no Cloudant é muito similar a do MongoDB, mas em um sistema totalmente novo. Abaixo podemos ver exemplos da interação do Cloudant com o Python:</p>
+<h4>Importações e estabelecimento de uma conexão:</h4>
+<p class="code">from cloudant.client import Cloudant<br>
+from cloudant.error import CloudantException<br>
+from cloudant.result import Result, ResultByKey<br>
+<br>
+client = Cloudant("<username>", "<password>", url="<url>")<br>
+client.connect()</p>
+<h4>Definindo a variável, criando o Banco de Dados e confirmando se foi criado:</h4>
+<p class="code">databaseName = "<yourDatabaseName>"<br>
+<br>
+myDatabase = client.create_database(databaseName)<br>
+<br>
+if myDatabase.exists():<br>
+   print "'{0}' successfully created.\n".format(databaseName)</p>
+<h4>Deletar o Banco de Dados:</h4>
+<p class="code">try :<br>
+    client.delete_database(databaseName)<br>
+except CloudantException:<br>
+    print "There was a problem deleting '{0}'.\n".format(databaseName)<br>
+else:<br>
+    print "'{0}' successfully deleted.\n".format(databaseName)</p>
+<h4>Desconectar:</h4>
+<p class="code">client.disconnect()</p>
+<h3 id="c7">Conclusão</h3>
+<p>Podemos concluir que o Cloudant é uma boa opção para Banco de Dados Orientado a Documentos, entre as diversas outras opções que estão no mercado, pois aplica o conceito de Cloud Computing.</p>
+<h3 id="c8">Referências</h3>
+<p class="quotation"><sup>[1]</sup>Document-oriented database, Wikipedia, the free encyclopedia. Disponível em: <https://en.wikipedia.org/wiki/Document-oriented_database>. Acesso em 25 de outubro de 2017.</p>
+<p class="quotation"><sup>[2]</sup>What is a Document Database, Amazon Web Services. Disponível em: <https://aws.amazon.com/nosql/document/>. Acesso em 25 de outubro de 2017.</p>
+<p class="quotation"><sup>[3]</sup>Document Databases, Basho. Disponível em: <http://basho.com/resources/document-databases/>. Acesso em 25 de outubro de 2017.</p>
+<p class="quotation"><sup>[4]</sup>Cloudant, Wikipedia, the free encyclopedia. Disponível em: <https://en.wikipedia.org/wiki/Cloudant>. Acesso em 25 de outubro de 2017.</p>
+<p class="quotation"><sup>[5]</sup>Alan Hoffman & Adam Kocoloski on Cloudant & CouchDB, Vimeo, the free encyclopedia. Disponível em: <https://vimeo.com/20364769>. Acesso em 25 de outubro de 2017.</p>
+<p class="quotation"><sup>[6]</sup>IBM Cloudant Database as a Service Advanced Topics, IBM Redbooks. Disponível em: <http://www.redbooks.ibm.com/redpapers/pdfs/redp5189.pdf>. Acesso em 13 de novembro de 2017.</p>
+<p class="quotation"><sup>[7]</sup>Introduction to Cloudant, Cloudant. Disponível em: <https://cloudant.com/wp-content/uploads/IntrotoCloudantDeck.pdf>. Acesso em 13 de novembro de 2017.</p>
+<p class="quotation"><sup>[8]</sup>Python-cloudant documentation, readthedocs. Disponível em: <https://media.readthedocs.org/pdf/python-cloudant/stable/python-cloudant.pdf>. Acesso em 14 de novembro de 2017.</p>
+<p class="quotation"><sup>[9]</sup>Cloudant NoSQL DB, IBM Cloud Docs. Disponível em: <https://console.bluemix.net/docs/services/Cloudant/getting-started.html#step-1-connect-to-your-cloudant-nosql-db-service-instance-on-ibm-cloud>. Acesso em 14 de novembro de 2017.</p>
+</body>
+</html>
